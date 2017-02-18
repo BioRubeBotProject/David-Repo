@@ -28,12 +28,15 @@ public class CircleEdgeCollider2D : MonoBehaviour
   //------------------------------------------------------------------------------------------------
   void Update()
   {
-    if(NumPoints != EdgeCollider.pointCount || 
-       CurrentInner != InnerRadius ||
-       CurrentOuter != OuterRadius)
-    {
-      DrawCircle();
-    }
+        if(Time.timeScale != 0)
+        {
+            if (NumPoints != EdgeCollider.pointCount ||
+                CurrentInner != InnerRadius ||
+                CurrentOuter != OuterRadius)
+            {
+                DrawCircle();
+            }
+        }  
   }
 
   //------------------------------------------------------------------------------------------------
